@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
   <title>Магазин готовых шаблонов Nerds</title>
 </head>
 <body>
   <header class="main-header">
     <nav class="main-header__nav main-navigation">
-      <a class="main-navigation__logo" href="index.html">
+      <a class="main-navigation__logo" href="index.html" aria-label="Перейти на главную страницу">
         <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип студии Nerds">
       </a>
       <ul class="main-navigation__list">
@@ -32,7 +33,63 @@
     <h1>Магазин готовых шаблонов</h1>
     <section class="filter">
       <h2 class="visually-hidden">Фильтр шаблонов</h2>
-      <!-- form -->
+      <form class="filter__form" action="https://echo.htmlacademy.ru" method="get">
+        <fieldset>
+          <legend>Стоимость:</legend>
+          <input type="range" name="price-range">
+          <p>
+            <label for="price-begin-field">от</label>
+            <input type="number" name="price-begin" id="price-begin-field">
+          </p>
+          <p>
+            <label for="price-end-field">до</label>
+            <input type="number" name="price-end" id="price-end-field">
+          </p>
+        </fieldset>
+        <fieldset>
+          <legend>Сетка:</legend>
+          <ul>
+            <li>
+              <input type="radio" name="grid" value="adaptive" id="grid-adaptive">
+              <label for="grid-adaptive">Адаптивная</label>
+            </li>
+            <li>
+              <input type="radio" name="grid" value="fixed" id="grid-fixed">
+              <label for="grid-fixed">Фиксированная</label>
+            </li>
+            <li>
+              <input type="radio" name="grid" value="responsive" id="grid-responsive">
+              <label for="grid-responsive">Резиновая</label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset>
+          <legend>Особенности:</legend>
+          <ul>
+            <li>
+              <input type="checkbox" name="slider" id="checkbox-slider" checked>
+              <label for="checkbox-slider">Слайдер</label>
+            </li>
+            <li>
+              <input type="checkbox" name="features" id="checkbox-features">
+              <label for="checkbox-features">Блок преимуществ</label>
+            </li>
+            <li>
+              <input type="checkbox" name="news" id="checkbox-news" checked>
+              <label for="checkbox-news">Новости</label>
+            </li>
+            <li>
+              <input type="checkbox" name="gallery" id="checkbox-gallery">
+              <label for="checkbox-gallery">Галерея</label>
+            </li>
+            <li>
+              <input type="checkbox" name="cart" id="checkbox-cart">
+              <label for="checkbox-cart">Корзина</label>
+            </li>
+          </ul>
+        </fieldset>
+        <button class="filter__button" type="submit">Показать</button>
+      </form>
     </section>
     <section class="sorting">
       <h2 class="visually-hidden">Сортировка результатов поиска</h2>
