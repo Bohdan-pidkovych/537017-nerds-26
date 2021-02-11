@@ -12,6 +12,9 @@ body {
 a {
   text-decoration: none;
 }
+img {
+  max-width: 100%;
+}
 
 .button {
   border: none;
@@ -23,6 +26,16 @@ a {
   vertical-align: middle;
   color: #ffffff;
   background-color: #fb565a;
+}
+
+.button:hover {
+  background-color: #e74246;
+}
+
+.button:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #d7373b;
+  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
 }
 
 .visually-hidden {
@@ -67,6 +80,7 @@ a {
 }
 
 .slider__controls {
+  margin: 0;
   list-style: none;
 }
 
@@ -149,7 +163,7 @@ a {
 }
 
 .services__item--presentations::before {
-  background-color: #efc849;
+  background-color: #efc84a;
   background-image: url("../img/illustration-3.png");
 }
 
@@ -157,8 +171,24 @@ a {
   background-color: #00ca74;
 }
 
+.services__item--apps .button:hover {
+  background-color: #00bc6c;
+}
+
+.services__item--apps .button:active {
+  background-color: #00aa62;
+}
+
 .services__item--presentations .button {
-  background-color: #efc849;
+  background-color: #efc84a;
+}
+
+.services__item--presentations .button:hover {
+  background-color: #eab534;
+}
+
+.services__item--presentations .button:active {
+  background-color: #e5a722;
 }
 
 .services__item h3 {
@@ -167,4 +197,95 @@ a {
   font-weight: 700;
   text-transform: uppercase;
   color: #000000;
+}
+
+.about__slogan {
+  font-size: 45px;
+  line-height: 45px;
+  font-weight: 500;
+  color: #000000;
+}
+
+.about h3 {
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.about__products {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.about__products li {
+  position: relative;
+  padding-left: 32px;
+}
+
+.about__products li::before {
+  content: "";
+  position: absolute;
+  top: 11px;
+  left: 0;
+  width: 25px;
+  height: 2px;
+  background-color: #fb565a;
+}
+
+.quality-percent {
+  font-size: 45px;
+  line-height: 64px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.quality-percent span {
+  vertical-align: top;
+  font-size: 26px;
+  line-height: 51px;
+}
+
+.quality-name {
+  margin: 0;
+  line-height: 18px;
+}
+
+.partners__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.partners__logo img {
+  opacity: 0.2;
+}
+
+.partners__logo:hover img {
+  opacity: 1;
+}
+
+.partners__logo:active img {
+  opacity: 0.1;
+}
+
+.contacts__info h3 {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.contacts__info p {
+  line-height: 18px;
+  color: #666666;
+}
+
+.contacts__info .contacts__phone {
+  color: #666666;
+}
+
+.contacts__map {
+  object-fit: cover;
 }
