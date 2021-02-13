@@ -22,7 +22,7 @@
         <li class="main-navigation__item">
           <a href="#">Клиенты</a>
         </li>
-        <li class="main-navigation__item">
+        <li class="main-navigation__item main-navigation__item--current">
           <a>Магазин</a>
         </li>
         <li class="main-navigation__item">
@@ -33,35 +33,35 @@
     </nav>
   </header>
   <main>
-    <h1>Магазин готовых шаблонов</h1>
+    <h1 class="page-title">Магазин готовых шаблонов</h1>
     <section class="filter">
       <h2 class="visually-hidden">Фильтр шаблонов</h2>
       <form class="filter__form" action="https://echo.htmlacademy.ru" method="get">
         <fieldset>
           <legend>Стоимость:</legend>
           <input type="range" name="price-range">
-          <p>
+          <p class="filter__price">
             <label for="price-begin-field">от</label>
-            <input type="number" name="price-begin" id="price-begin-field">
+            <input type="number" name="price-begin" id="price-begin-field" value="0">
           </p>
-          <p>
+          <p class="filter__price">
             <label for="price-end-field">до</label>
-            <input type="number" name="price-end" id="price-end-field">
+            <input type="number" name="price-end" id="price-end-field" value="15000">
           </p>
         </fieldset>
         <fieldset>
           <legend>Сетка:</legend>
           <ul>
             <li>
-              <input type="radio" name="grid" value="adaptive" id="grid-adaptive">
+              <input class="filter__input-radio" type="radio" name="grid" value="adaptive" id="grid-adaptive" checked>
               <label for="grid-adaptive">Адаптивная</label>
             </li>
             <li>
-              <input type="radio" name="grid" value="fixed" id="grid-fixed">
+              <input class="filter__input-radio" type="radio" name="grid" value="fixed" id="grid-fixed">
               <label for="grid-fixed">Фиксированная</label>
             </li>
             <li>
-              <input type="radio" name="grid" value="responsive" id="grid-responsive">
+              <input class="filter__input-radio" type="radio" name="grid" value="responsive" id="grid-responsive">
               <label for="grid-responsive">Резиновая</label>
             </li>
           </ul>
@@ -70,28 +70,28 @@
           <legend>Особенности:</legend>
           <ul>
             <li>
-              <input type="checkbox" name="slider" id="checkbox-slider" checked>
+              <input class="filter__input-checkbox" type="checkbox" name="slider" id="checkbox-slider" checked>
               <label for="checkbox-slider">Слайдер</label>
             </li>
             <li>
-              <input type="checkbox" name="features" id="checkbox-features">
+              <input class="filter__input-checkbox" type="checkbox" name="features" id="checkbox-features">
               <label for="checkbox-features">Блок преимуществ</label>
             </li>
             <li>
-              <input type="checkbox" name="news" id="checkbox-news" checked>
+              <input class="filter__input-checkbox" type="checkbox" name="news" id="checkbox-news" checked>
               <label for="checkbox-news">Новости</label>
             </li>
             <li>
-              <input type="checkbox" name="gallery" id="checkbox-gallery">
+              <input class="filter__input-checkbox" type="checkbox" name="gallery" id="checkbox-gallery">
               <label for="checkbox-gallery">Галерея</label>
             </li>
             <li>
-              <input type="checkbox" name="cart" id="checkbox-cart">
+              <input class="filter__input-checkbox" type="checkbox" name="cart" id="checkbox-cart">
               <label for="checkbox-cart">Корзина</label>
             </li>
           </ul>
         </fieldset>
-        <button class="filter__button" type="submit">Показать</button>
+        <button class="filter__button button" type="submit">Показать</button>
       </form>
     </section>
     <section class="sorting">
@@ -210,14 +210,14 @@
         </li>
       </ul>
       <div class="social__text">
-        <p class="social__slogan"><b>Давайте дружить, это выгодно!</b></p>
-        <p>Скидка 10% для друзей из социальных сетей.</p>
+        <p class="social__slogan">Давайте дружить, это выгодно!</p>
+        <p class="social__discount">Скидка 10% для друзей из социальных сетей.</p>
       </div>
     </section>
   </footer>
   <section class="modal modal--contacts">
     <h2 class="modal__title">Напишите нам</h2>
-    <form action="#" method="post">
+    <form class="modal__form" action="#" method="post">
       <p>
         <label for="name-field">Ваше имя:</label>
         <input type="text" name="name" id="name-field" placeholder="Имя Фамилия">
