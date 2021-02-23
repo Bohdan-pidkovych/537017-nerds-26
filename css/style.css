@@ -104,6 +104,7 @@ img {
   border: none;
   border-radius: 50%;
   background-color: #ffffff;
+  cursor: pointer;
 }
 
 .slider__controls .active::before {
@@ -373,6 +374,56 @@ img {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.product__info {
+  text-align: center;
+  background-color: #eeeeee;
+}
+
+.product__title {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.product__text {
+  line-height: 18px;
+  color: #666666;
+}
+
+.pagination {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pagination__item a {
+  border-radius: 3px;
+  line-height: 18px;
+  font-weight: 500;
+  color: #000000;
+}
+
+.pagination__item:not(.pagination__item--current) a {
+  background-color: #eeeeee;
+}
+
+.pagination__item:not(.pagination__item--current) a:hover {
+  background-color: #dfdfdf;
+}
+
+.pagination__item:not(.pagination__item--current) a:active {
+  color: rgba(0, 0, 0, 0.3);
+  background-color: #d5d5d5;
+  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+}
+
+.pagination__item--current a {
+  border: 3px solid #dbdbdb;
+  cursor: default;
 }
 
 .contacts__info h3 {
