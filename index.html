@@ -11,7 +11,7 @@
 </head>
 <body>
   <header class="main-header">
-    <nav class="main-header__nav main-navigation">
+    <nav class="main-header__nav main-navigation container">
       <a class="main-navigation__logo">
         <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип студии Nerds">
       </a>
@@ -35,31 +35,33 @@
   <main>
     <h1 class="visually-hidden">Дизайн-студия Nerds</h1>
     <section class="features slider">
-      <h2 class="visually-hidden">Преимущества</h2>
-      <ul class="slider__controls">
-        <li><button class="active" type="button"><span class="visually-hidden">Первый слайд</span></button></li>
-        <li><button type="button"><span class="visually-hidden">Второй слайд</span></button></li>
-        <li><button type="button"><span class="visually-hidden">Третий слайд</span></button></li>
-      </ul>
-      <ul class="slider__list">
-        <li class="slider__item slider__item--first">
-          <h3>Долго, дорого,<br> скрупулезно.</h3>
-          <p>Математически выверенный дизайн<br> для вашего сайта или мобильного приложения.</p>
-          <a class="slider__button button" href="#">Узнать больше</a>
-        </li>
-        <li class="slider__item slider__item--second">
-          <h3>Любим математику как никто другой</h3>
-          <p>Никакого креатива, только математические формулы для расчета идеальных пропорций.</p>
-          <a class="slider__button button" href="#">Узнать больше</a>
-        </li>
-        <li class="slider__item slider__item--third">
-          <h3>Только ночь,<br> только хардкор</h3>
-          <p>Работать днем, как все? Мы против этого.<br> Ближе к полуночи работа только начинается.</p>
-          <a class="slider__button button" href="#">Узнать больше</a>
-        </li>
-      </ul>
+      <div class="container">
+        <h2 class="visually-hidden">Преимущества</h2>
+        <ul class="slider__controls">
+          <li><button class="active" type="button"><span class="visually-hidden">Первый слайд</span></button></li>
+          <li><button type="button"><span class="visually-hidden">Второй слайд</span></button></li>
+          <li><button type="button"><span class="visually-hidden">Третий слайд</span></button></li>
+        </ul>
+        <ul class="slider__list">
+          <li class="slider__item slider__item--first">
+            <h3>Долго, дорого,<br> скрупулезно.</h3>
+            <p>Математически выверенный дизайн<br> для вашего сайта или мобильного приложения.</p>
+            <a class="slider__button button" href="#">Узнать больше</a>
+          </li>
+          <li class="slider__item slider__item--second">
+            <h3>Любим математику как никто другой</h3>
+            <p>Никакого креатива, только математические формулы для расчета идеальных пропорций.</p>
+            <a class="slider__button button" href="#">Узнать больше</a>
+          </li>
+          <li class="slider__item slider__item--third">
+            <h3>Только ночь,<br> только хардкор</h3>
+            <p>Работать днем, как все? Мы против этого.<br> Ближе к полуночи работа только начинается.</p>
+            <a class="slider__button button" href="#">Узнать больше</a>
+          </li>
+        </ul>
+      </div>
     </section>
-    <section class="services">
+    <section class="services container">
       <h2 class="visually-hidden">Услуги</h2>
       <ul class="services__list">
         <li class="services__item services__item--sites">
@@ -79,9 +81,9 @@
         </li>
       </ul>
     </section>
-    <section class="about">
+    <section class="about container">
       <h2 class="visually-hidden">Немного о нас</h2>
-      <div class="about__column">
+      <div class="about__column-description">
         <p class="about__slogan">Мы — маленькая, но гордая дизайн-студия из Краснодара.</p>
         <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.</p>
         <h3>Выполняем заказы на разработку:</h3>
@@ -91,7 +93,7 @@
           <li>Слайдшоу и видео для корпоративных презентаций</li>
         </ul>
       </div>
-      <div class="about__column">
+      <div class="about__column-quality">
         <img src="img/nerds-picture.png" width="360" height="208" alt="Цветной логотип студии Nerds">
         <h3>С 2004 года Любим точность во всем:</h3>
         <dl class="quality-list">
@@ -104,7 +106,7 @@
         </dl>
       </div>
     </section>
-    <section class="partners">
+    <section class="partners container">
       <h2 class="visually-hidden">Наши партнеры</h2>
       <ul class="partners__list">
         <li class="partners__item">
