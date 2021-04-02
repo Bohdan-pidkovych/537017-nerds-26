@@ -333,13 +333,21 @@ img {
 }
 
 .partners {
+  margin-bottom: 80px;
   padding: 45px 0;
 }
 
 .partners__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.partners__item {
+  padding: 0 45px;
 }
 
 .partners__logo img {
@@ -518,14 +526,35 @@ img {
   object-fit: cover;
 }
 
+.social {
+  display: flex;
+  align-items: center;
+  padding: 68px 0;
+}
+
 .social__list {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 360px;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
+.social__item {
+  margin-right: 9px;
+}
+
+.social__item:last-child {
+  margin-right: 0;
+}
+
 .social__item a {
   color: inherit;
+}
+
+.social__text {
+  margin-left: 139px;
 }
 
 .social__slogan {
