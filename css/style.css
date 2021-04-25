@@ -25,14 +25,16 @@ img {
 }
 
 .button {
+  display: inline-block;
+  padding: 16px 10px;
   border: none;
   border-radius: 3px;
   font: inherit;
+  font-size: 16px;
   line-height: 18px;
   font-weight: 500;
   text-transform: uppercase;
   text-align: center;
-  vertical-align: middle;
   color: #ffffff;
   background-color: #fb565a;
 }
@@ -125,19 +127,25 @@ img {
 }
 
 .features {
+  position: relative;
   background-color: #eeeeee;
 }
 
 .slider__controls {
+  position: absolute;
+  left: 50%;
+  bottom: 86px;
+  z-index: 5;
   display: flex;
   justify-content: center;
   margin: 0;
   padding: 0;
   list-style: none;
+  transform: translateX(-50%);
 }
 
 .slider__controls li {
-  margin-right: 17px;
+  margin-right: 9px;
 }
 
 .slider__controls li:last-child {
@@ -146,23 +154,35 @@ img {
 
 .slider__controls button {
   position: relative;
-  width: 18px;
-  height: 18px;
+  width: 32px;
+  height: 32px;
   border: none;
   border-radius: 50%;
-  background-color: #ffffff;
+  background-color: transparent;
   cursor: pointer;
 }
 
-.slider__controls .active::before {
+.slider__controls button::before {
   content: "";
   position: absolute;
-  top: 5px;
-  left: 5px;
+  top: 7px;
+  left: 7px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+
+.slider__controls .active::after {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 12px;
   width: 8px;
   height: 8px;
   border: 2px solid #c1c1c1;
   border-radius: 50%;
+  background-color: inherit;
 }
 
 .slider__list {
@@ -172,29 +192,46 @@ img {
 }
 
 .slider__item {
+  display: none;
   min-height: 431px;
+  padding: 78px 0 80px;
   background-repeat: no-repeat;
   background-size: 760px 431px;
   background-position: right;
 }
 
-.slider__item--first {
+.slider__item:nth-child(1) {
+  display: block;
   background-image: url("../img/nerds-index-slide1.png");
 }
 
-.slider__item--second {
+.slider__item:nth-child(2) {
   background-image: url("../img/nerds-index-slide2.png");
 }
 
-.slider__item--third {
+.slider__item:nth-child(3) {
   background-image: url("../img/nerds-index-slide3.png");
 }
 
 .slider__item h3 {
+  max-width: 600px;
+  margin: 0;
+  margin-bottom: 25px;
   font-size: 55px;
   line-height: 55px;
   font-weight: 500;
   color: #000000;
+}
+
+.slider__item p {
+  max-width: 430px;
+  margin: 0;
+  margin-bottom: 35px;
+}
+
+.slider__button {
+  min-width: 240px;
+  max-width: 450px;
 }
 
 .services {
@@ -539,8 +576,11 @@ img {
 
 .contacts {
   position: relative;
-  display: flex;
   min-height: 416px;
+}
+
+.contacts .container {
+  display: flex;
 }
 
 .contacts__info {
