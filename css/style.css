@@ -277,7 +277,18 @@ input[type="radio"].visually-hidden {
 }
 
 .services {
-  padding: 80px 0;
+  position: relative;
+  padding: 79px 10px 82px 10px;
+}
+
+.services::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+  width: 1160px;
+  height: 2px;
+  background-color: #eeeeee;
 }
 
 .services__list {
@@ -345,11 +356,24 @@ input[type="radio"].visually-hidden {
 }
 
 .services__item h3 {
+  margin: 0;
+  margin-top: 25px;
   font-size: 24px;
   line-height: 30px;
   font-weight: 700;
   text-transform: uppercase;
   color: #000000;
+}
+
+.services__item p {
+  max-width: 260px;
+  margin: 0;
+  margin-top: 16px;
+}
+
+.services__button {
+  min-width: 160px;
+  margin-top: 33px;
 }
 
 .about__slogan {
