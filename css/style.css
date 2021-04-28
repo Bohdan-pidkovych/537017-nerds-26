@@ -376,26 +376,21 @@ input[type="radio"].visually-hidden {
   margin-top: 33px;
 }
 
-.about__slogan {
-  font-size: 45px;
-  line-height: 45px;
-  font-weight: 500;
-  color: #000000;
-}
-
 .about {
+  position: relative;
   display: flex;
   justify-content: space-between;
-  padding: 40px 0 75px;
+  padding: 40px 10px 75px 10px;
 }
 
-.about__column-description {
-  width: 650px;
-  margin-right: 20px;
-}
-
-.about__column-quality {
-  width: 360px;
+.about::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+  width: 1160px;
+  height: 2px;
+  background-color: #eeeeee;
 }
 
 .about h3 {
@@ -403,6 +398,25 @@ input[type="radio"].visually-hidden {
   font-weight: 700;
   text-transform: uppercase;
   color: #000000;
+}
+
+.about__column-description {
+  width: 650px;
+  margin-right: 20px;
+}
+
+.about__slogan {
+  margin-top: 35px;
+  margin-bottom: 32px;
+  font-size: 45px;
+  line-height: 45px;
+  font-weight: 500;
+  color: #000000;
+}
+
+.about__column-description h3 {
+  margin-top: 39px;
+  margin-bottom: 24px;
 }
 
 .about__products {
@@ -413,7 +427,12 @@ input[type="radio"].visually-hidden {
 
 .about__products li {
   position: relative;
-  padding-left: 32px;
+  margin-bottom: 24px;
+  padding-left: 36px;
+}
+
+.about__products li:last-child {
+  margin-bottom: 0;
 }
 
 .about__products li::before {
@@ -426,7 +445,27 @@ input[type="radio"].visually-hidden {
   background-color: #fb565a;
 }
 
+.about__column-quality {
+  width: 360px;
+}
+
+.about__column-quality h3 {
+  margin-top: 29px;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.quality-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+}
+
 .quality-percent {
+  order: -1;
+  width: 120px;
+  margin-bottom: 10px;
+  padding-right: 10px;
   font-size: 45px;
   line-height: 64px;
   font-weight: 700;
@@ -440,13 +479,27 @@ input[type="radio"].visually-hidden {
 }
 
 .quality-name {
+  width: 120px;
   margin: 0;
+  padding-right: 10px;
   line-height: 18px;
 }
 
 .partners {
-  margin-bottom: 80px;
-  padding: 45px 0;
+  position: relative;
+  min-height: 182px;
+  margin-bottom: 81px;
+  padding: 10px;
+}
+
+.partners::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+  width: 1160px;
+  height: 2px;
+  background-color: #eeeeee;
 }
 
 .partners__list {
@@ -459,7 +512,22 @@ input[type="radio"].visually-hidden {
 }
 
 .partners__item {
-  padding: 0 45px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 295px;
+  height: 162px;
+  padding: 20px;
+}
+
+.partners__item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 2px;
+  height: 52px;
+  background-color: #eeeeee;
 }
 
 .partners__logo img {
