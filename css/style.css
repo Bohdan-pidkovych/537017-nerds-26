@@ -39,6 +39,7 @@ img {
   text-align: center;
   color: #ffffff;
   background-color: #fb565a;
+  cursor: pointer;
 }
 
 .button:hover {
@@ -720,13 +721,15 @@ input[type="radio"].visually-hidden {
 .contacts__info {
   position: relative;
   width: 320px;
-  margin-top: 54px;
+  margin-top: 53px;
   padding: 50px;
   background-color: #ffffff;
   z-index: 2;
 }
 
 .contacts__info h3 {
+  margin: 0;
+  margin-bottom: 22px;
   font-size: 18px;
   line-height: 30px;
   font-weight: 700;
@@ -735,12 +738,19 @@ input[type="radio"].visually-hidden {
 }
 
 .contacts__info p {
+  margin: 0;
+  margin-bottom: 19px;
   line-height: 18px;
   color: #666666;
 }
 
 .contacts__info .contacts__phone {
   color: #666666;
+}
+
+.contacts__button {
+  width: 100%;
+  margin-top: 19px;
 }
 
 .contacts__map {
@@ -755,7 +765,7 @@ input[type="radio"].visually-hidden {
 .social {
   display: flex;
   align-items: center;
-  padding: 68px 0;
+  padding: 68px 10px;
 }
 
 .social__list {
@@ -776,7 +786,37 @@ input[type="radio"].visually-hidden {
 }
 
 .social__item a {
+  position: relative;
+  display: block;
+  width: 81px;
+  height: 81px;
+  border-radius: 50%;
+  background-color: #e1e1e1;
   color: inherit;
+}
+
+.social__item a::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 26px;
+  height: 22px;
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: translate(-50%, -50%);
+}
+
+.social__item--vk a::before {
+  background-image: url("../img/icon-vk.svg");
+}
+
+.social__item--fb a::before {
+  background-image: url("../img/icon-fb.svg");
+}
+
+.social__item--ig a::before {
+  background-image: url("../img/icon-ig.svg");
 }
 
 .social__text {
@@ -784,6 +824,8 @@ input[type="radio"].visually-hidden {
 }
 
 .social__slogan {
+  margin: 0;
+  margin-bottom: 11px;
   font-size: 36px;
   line-height: 36px;
   font-weight: 700;
@@ -791,17 +833,24 @@ input[type="radio"].visually-hidden {
 }
 
 .social__discount {
+  margin: 0;
   line-height: 22px;
   color: #444444;
 }
 
 .modal {
+  position: relative;
+  width: 960px;
+  margin: 0 auto;
+  padding: 63px 100px 84px 100px;
   color: #000000;
   background-color: #ffffff;
   box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.4);
 }
 
 .modal__title {
+  margin: 0;
+  margin-bottom: 37px;
   font-size: 45px;
   line-height: 53px;
   font-weight: 700;
@@ -848,4 +897,34 @@ input[type="radio"].visually-hidden {
 .modal__form textarea:invalid {
   border: 2px solid #e74246;
   color: #e74246;
+}
+
+.modal__close-button {
+  position: absolute;
+  top: 78px;
+  right: 90px;
+  width: 30px;
+  height: 30px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.modal__close-button::before,
+.modal__close-button::after {
+  content: "";
+  position: absolute;
+  top: 14px;
+  left: 5px;
+  width: 19px;
+  height: 3px;
+  background-color: #fb565a;
+}
+
+.modal__close-button::before {
+  transform: rotate(45deg);
+}
+
+.modal__close-button::after {
+  transform: rotate(-45deg);
 }
