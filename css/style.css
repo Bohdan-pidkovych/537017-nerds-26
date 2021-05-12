@@ -7,6 +7,7 @@ html {
 }
 
 body {
+  min-width: 1160px;
   margin: 0;
   padding: 0;
   font-family: "Roboto", "Arial", sans-serif;
@@ -125,12 +126,17 @@ input[type="radio"].visually-hidden {
   color: rgba(0, 0, 0, 0.3);
 }
 
+.main-navigation__item--current a,
+.main-navigation__cart--active {
+  cursor: default;
+}
+
 .main-navigation__item--current a::after,
 .main-navigation__cart--active::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: 5px;
   width: 100%;
   height: 2px;
   background-color: #fb565a;
@@ -155,7 +161,7 @@ input[type="radio"].visually-hidden {
 }
 
 .page-title-wrapper {
-  padding: 70px 0 105px;
+  padding: 77px 0 109px;
   background-color: #eeeeee;
 }
 
@@ -554,6 +560,7 @@ input[type="radio"].visually-hidden {
 }
 
 .filter__form fieldset {
+  margin: 0;
   padding: 0;
   border: none;
 }
@@ -577,14 +584,96 @@ input[type="radio"].visually-hidden {
   color: #283136;
 }
 
-.filter__price {
+.filter__range {
+  margin-top: 48px;
+}
+
+.range__controls {
+  position: relative;
+  margin-bottom: 14px;
+  padding: 39px 20px;
+  border-radius: 3px;
+  background-color: #eeeeee;
+}
+
+.range__scale {
+  height: 2px;
+  background-color: #d7dcdf;
+}
+
+.range__bar {
+  width: 70%;
+  height: 2px;
+  background-color: #00ca74;
+}
+
+.range__toggle {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background-color: #ffffff;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+.range__toggle::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #ababab;
+}
+
+.range__toggle--min {
+  left: 18px;
+}
+
+.range__toggle--max {
+  left: 160px;
+}
+
+.range__price {
+  display: flex;
+}
+
+.range__price-item {
+  width: 50%;
+  margin: 0;
   line-height: 22px;
   text-transform: uppercase;
 }
 
-.filter__price input {
+.range__price-item:last-child {
+  text-align: right;
+}
+
+.range__price-item input {
+  width: 80px;
+  margin-left: 9px;
+  padding: 8px 10px;
+  border: none;
+  border-radius: 3px;
   font: inherit;
+  text-align: center;
+  font-size: 16px;
   color: #283136;
+  background-color: #eeeeee;
+  -moz-appearance: textfield;
+  -webkit-appearance: textfield;
+	appearance: textfield;
+}
+
+.range__price-item input::-webkit-outer-spin-button,
+.range__price-item input::-webkit-inner-spin-button {
+    display: none;;
 }
 
 .filter__input-radio:disabled + label,

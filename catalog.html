@@ -42,15 +42,25 @@
         <form class="filter__form" action="https://echo.htmlacademy.ru" method="get">
           <fieldset>
             <legend>Стоимость:</legend>
-            <input type="range" name="price-range">
-            <p class="filter__price">
-              <label for="price-begin-field">от</label>
-              <input type="number" name="price-begin" id="price-begin-field" value="0">
-            </p>
-            <p class="filter__price">
-              <label for="price-end-field">до</label>
-              <input type="number" name="price-end" id="price-end-field" value="15000">
-            </p>
+            <div class="filter__range range">
+              <div class="range__controls">
+                <div class="range__scale">
+                  <div class="range__bar"></div>
+                </div>
+                <button class="range__toggle range__toggle--min" type="button"><span class="visually-hidden">Цена от</span></button>
+                <button class="range__toggle range__toggle--max" type="button"><span class="visually-hidden">Цена до</span></button>
+              </div>
+              <div class="range__price">
+                <p class="range__price-item">
+                  <label for="price-begin-field">от</label>
+                  <input type="number" name="price-begin" id="price-begin-field" value="0">
+                </p>
+                <p class="range__price-item">
+                  <label for="price-end-field">до</label>
+                  <input type="number" name="price-end" id="price-end-field" value="15000">
+                </p>
+              </div>
+            </div>
           </fieldset>
           <fieldset>
             <legend>Сетка:</legend>
